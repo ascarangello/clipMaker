@@ -1,9 +1,11 @@
 
-
 public class URLReader {
 
   public static void main(String[] args) {
-    new ClipMakerView();
+   ClipMakerView view = new ClipMakerView();
+   ClipMakerModel model = new ClipMakerModel();
+   ClipMakerController controller = new ClipMakerController(model, view);
+
   }
 }
 

@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -29,6 +30,7 @@ public class ClipMakerView extends JFrame {
     goButton = new JButton("Create Clip");
     this.add(goButton, BorderLayout.SOUTH);
 
+
     urlLabel = new JLabel("Enter a valid article URL here:");
     URLPanel.add(urlLabel);
 
@@ -46,4 +48,17 @@ public class ClipMakerView extends JFrame {
 
   }
 
+  public void setCommandButtonListener(ActionListener e) {
+    goButton.addActionListener(e);
+  }
+
+  public String getURL() {
+    return this.urlField.getText();
+  }
+
+  public String getClientName() {
+    return this.clientField.getText();
+  }
 }
+
+
