@@ -15,9 +15,30 @@ public class ClipMakerModel {
   private String clientName;
   private ArrayList<String> articleContent;
 
+  public String getUrl() {
+    return url;
+  }
+
+  public String getHeadline() {
+    return headline;
+  }
+
+  public String getDate() {
+    return date;
+  }
+
+  public String getClientName() {
+    return clientName;
+  }
+
+  public ArrayList<String> getArticleContent() {
+    return articleContent;
+  }
+
   public ClipMakerModel(String url, String clientName) {
     this.url = url;
     this.clientName = clientName;
+
     Document doc = null;
     try {
       doc = Jsoup.connect(url).get();
